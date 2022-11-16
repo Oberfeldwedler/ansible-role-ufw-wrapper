@@ -1,0 +1,31 @@
+---
+
+- name: Ansible SSH Port
+  ansible.builtin.debug: msg="{{ ssh_port }}"
+
+- name: Update repository cache
+  apt:
+    update_cache: yes
+
+- name: Install ufw
+  apt:
+    name:
+      - ufw
+    state: latest
+
+- name: Disable ufw and reset to defaults
+  ufw:
+    state: "{{ item }}"
+  loop:
+    - disabled
+    - reset
+
+- name: Allow SSH
+  ufw:
+    rule: allow
+    port: "{{ ssh_port }}"
+    direction: in
+
+- name: Configure ufw
+  import_role:
+    name: weareinteractive.ufw
