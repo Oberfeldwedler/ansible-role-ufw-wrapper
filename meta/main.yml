@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: ufw-wrapper
+  role_name: ufwwrapper
   author: oberfeldwedler
   description:  wrapper for weareinteractive.ufw which resets ufw to default and ensures ssh access
   license: "license (BSD, MIT)"
