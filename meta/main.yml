@@ -7,3 +7,7 @@ galaxy_info:
   galaxy_tags:
     - matlab
 
+dependencies:
+  - role: weareinteractive.ufw
+
+
