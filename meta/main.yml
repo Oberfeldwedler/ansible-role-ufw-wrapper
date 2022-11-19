@@ -3,7 +3,7 @@ galaxy_info:
   author: oberfeldwedler
   description:  wrapper for weareinteractive.ufw which resets ufw to default and ensures ssh access
   license: "license (BSD, MIT)"
-  min_ansible_version: 2.1
+  min_ansible_version: "2.1"
   galaxy_tags:
     - matlab
 
